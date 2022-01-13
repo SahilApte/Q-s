@@ -1,5 +1,5 @@
 n,m = map(int,input().split())
-p = "<>"
+p = "<|>"
 
 for i in range(n//2):
     print((p*((i*2)+1)).center(m,'*'))

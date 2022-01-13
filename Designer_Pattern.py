@@ -1,14 +1,15 @@
-n,m = map(int,input().split())
+r,c = map(int,input().split())
 p = "<|>"
 
-for i in range(n//2):
-    print((p*((i*2)+1)).center(m,'*'))
+for i in range(r//2):
+    print((p*((i*2)+1)).center(c,'*'))
 
-print("I ♡ to Code".center(m,'*'))
+print("I ♡ to Code".center(c,'*'))
 
-for j in range(n//2-1,-1,-1):
-    print((p*((j*2)+1)).center(m,'*'))
-# get differnt patterns by chaging the characters
+for j in range(r//2-1,-1,-1):
+    print((p*((j*2)+1)).center(c,'*'))
+
+# get differnt patterns by changing the characters
 """
 Sample Input:
 9 27

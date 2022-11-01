@@ -1,6 +1,6 @@
 import java.io.*;
 import java.util.*;
-class OneCounter
+class MinFact
 {
     public static void main(String args[])
     {
@@ -22,28 +22,5 @@ class OneCounter
         System.out.println(n1+ " "+n2);
         // System.out.println(lst);
         
-    }
-}
-##### method 2
-import java.io.*;
-import java.util.*;
-
-class P3{
-    static int oneCounter(int n){
-        int count = 0;
-        while(n > 0){
-            if(n % 2 == 1){
-                count += 1;
-            }
-            n /= 2;
-        }
-        return count;
-    }
-    public static void main (String[] args) {
-        Scanner sc = new Scanner(System.in);
-        int n = sc.nextInt();
-        for(int i = 0; i <= n; i++){
-            System.out.print(oneCounter(i) + " ");
-        }
     }
 }

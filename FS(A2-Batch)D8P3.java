@@ -30,8 +30,9 @@ input:
 output:
 --------------------
 24 34 44*/
+
 import java.util.*;
-public class FS(A2-Batch)D7P3
+public class FS(A2-Batch)D8P3
 {
     public static int[] swap(int arr[],int val,int mid)
     {

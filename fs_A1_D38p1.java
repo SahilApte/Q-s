@@ -11,12 +11,13 @@ input=5
 output=8
 */
 import java.util.*;
-class fs_A1_D38p1{
+class james{
     public static void main(String args[]){
         Scanner in = new Scanner(System.in);
         int n = in.nextInt();
-        System.out.print(func(n));
-    }
+        int[] memo = new int[n+1];
+        System.out.print(func(n,memo));
+    }/*
     public static int func(int n){
         if(n == 0){
             return 0;
@@ -26,9 +27,31 @@ class fs_A1_D38p1{
             return 2;
         }else {
             return func(n-2) + func(n-1);
+        }*/
+        // public static int func(int n){
+        //     int dp[] = new int[n+1];
+        //     dp[0] = 0;
+        //     dp[1] = 1;
+        //     dp[2] = 2;
+        //     for(int i=3;i<=n;i++){
+        //     dp[i] = dp[i-1]+dp[i-2];
+        //     }
+        //     return dp[n];
+        // }
+        public static int func(int n, int[] memo){
+            if(n == 0){
+                return 0;
+            }else if(n == 1){
+                return 1;
+            }else if(n == 2){
+                return 2;
+            }
+            if(memo[n]>0)
+                return memo[n];
+            memo[n] = func(n-1,memo)+func(n-2,memo);
+            return memo[n];
         }
         
         //if(n<2)return 1;
         //return func(n-2) + func(n-1);
     }
-}

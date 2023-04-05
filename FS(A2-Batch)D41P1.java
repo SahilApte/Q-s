@@ -22,36 +22,27 @@ Sample Testcase:
 input =qazwsxedcrfvtgbyhnujmikolp
 confirmation
 output =117
-  import java.util.*;
-public class Hi
+import java.util.*;
+public class Keyboard
 {
     public static void main(String ar[])
     {
-        Scanner sc= new Scanner(System.in);
-        int m = sc.nextInt();
-        int k = sc.nextInt();
-        sc.nextLine();
-        String s[] = sc.nextLine().split(" ");
-        int arr[] = new int[s.length];
-        ArrayList<Integer> lst = new ArrayList<>();
-        for(int i=0;i<s.length;i++)
+        Scanner sc =new Scanner(System.in);
+        String s = sc.next();
+        String s1 = sc.next();
+        HashMap<Character,Integer> hm = new HashMap<>();
+        for(int i=0;i<s.length();i++)
         {
-            arr[i]=Integer.valueOf(s[i]);
+            hm.put(s.charAt(i),i);
         }
-        int n = arr.length;
-   
-        for(int i = 0;i<=n-k;i++)
+        int time =hm.get(s1.charAt(0));
+        for(int i=0;i<s1.length()-1;i++)
         {
-            int curr =0;
-            for(int j=0;j<k;j++)
+            if(hm.containsKey(s1.charAt(i)))
             {
-                curr = Math.max(curr,arr[i+j]);
+                time+=Math.abs(hm.get(s1.charAt(i+1))-hm.get(s1.charAt(i)));
             }
-            lst.add(curr);
         }
-  
-        System.out.println(lst);
-       
-        
+        System.out.println(time);
     }
 }

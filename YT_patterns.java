@@ -174,6 +174,20 @@ public class YT_patterns {
             System.out.println();
         }
     }
+    
+    //11111
+// 222
+// 33
+// 4
+    public static void invertedHalfPyramid(int n){
+        for(int i=n;i>=1;i--){
+            for(int j=1;j<=i;j++){
+                System.out.print(i);
+            }
+            System.out.println();
+        }
+    }
+
 
 
     
@@ -188,7 +202,8 @@ public class YT_patterns {
         // test(4,5);
         // hollowButterFly(10);
         // hollowRhombus(5);
-        pascalsTriangle(5);
+        // pascalsTriangle(5);
         // halfPyramid(5);
+        invertedHalfPyramid(5);
     }
 }

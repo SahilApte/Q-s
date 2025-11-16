@@ -1,5 +1,5 @@
 
-Write a program to generate the following pattern for any given value 'n'
+/**Write a program to generate the following pattern for any given value 'n'
 
 
 input = 25
@@ -63,11 +63,11 @@ output =
 * A B C D E F G H I J K L M N O P Q R S T U V W X Y Z A B *
 * C D E F G H I J K L M N O P Q R S T U V W X Y Z A B C D *
 * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
-
+**/
 
 
 import java.util.*;
-public class Prog
+public class ABCDPattern
 {
     public static void main (String[] args) {
         Scanner sc = new Scanner(System.in);
